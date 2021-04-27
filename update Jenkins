@@ -1,0 +1,62 @@
+#check version of Jenkins
+[root@rr-seceng-centos ~]# cd /var/lib/jenkins/
+[root@rr-seceng-centos jenkins]# cat config.xml | grep version
+<?xml version='1.1' encoding='UTF-8'?>
+  <version>2.263.3</version>
+#update Jenkins
+[root@rr-seceng-centos jenkins]# 
+[root@rr-seceng-centos jenkins]# yum update jenkins
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+epel/x86_64/metalink                                                                                    | 4.5 kB  00:00:00     
+ * epel: ftp.riken.jp
+base                                                                                                    | 3.6 kB  00:00:00     
+epel                                                                                                    | 4.7 kB  00:00:00     
+extras                                                                                                  | 2.9 kB  00:00:00     
+jenkins                                                                                                 | 2.9 kB  00:00:00     
+updates                                                                                                 | 2.9 kB  00:00:00     
+(1/5): epel/x86_64/updateinfo                                                                           | 1.0 MB  00:00:05     
+(2/5): extras/7/x86_64/primary_db                                                                       | 232 kB  00:00:00     
+(3/5): updates/7/x86_64/primary_db                                                                      | 7.1 MB  00:00:00     
+(4/5): epel/x86_64/primary_db                                                                           | 6.9 MB  00:00:01     
+(5/5): jenkins/primary_db                                                                               |  37 kB  00:00:14     
+Resolving Dependencies
+--> Running transaction check
+---> Package jenkins.noarch 0:2.263.3-1.1 will be updated
+---> Package jenkins.noarch 0:2.277.3-1.1 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================================
+ Package                      Arch                        Version                           Repository                    Size
+===============================================================================================================================
+Updating:
+ jenkins                      noarch                      2.277.3-1.1                       jenkins                       67 M
+
+Transaction Summary
+===============================================================================================================================
+Upgrade  1 Package
+
+Total download size: 67 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+jenkins-2.277.3-1.1.noarch.rpm                                                                          |  67 MB  00:00:45     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : jenkins-2.277.3-1.1.noarch                                                                                  1/2 
+  Cleanup    : jenkins-2.263.3-1.1.noarch                                                                                  2/2 
+  Verifying  : jenkins-2.277.3-1.1.noarch                                                                                  1/2 
+  Verifying  : jenkins-2.263.3-1.1.noarch                                                                                  2/2 
+
+Updated:
+  jenkins.noarch 0:2.277.3-1.1                                                                                                 
+
+Complete!
+[root@rr-seceng-centos jenkins]# cat config.xml | grep version
+<?xml version='1.1' encoding='UTF-8'?>
+  <version>2.277.3</version>
