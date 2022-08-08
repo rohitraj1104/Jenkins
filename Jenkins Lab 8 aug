@@ -86,4 +86,4 @@ Create new repositry in git >> create ssh key in machine and add in git under se
 copy git remote command and paste into machine.
 last cmd is git push -u origin master
 
-So I sucesfully pulled this repo : https://github.com/rohitraj1104/lab
+So I sucesfully pushed this repo : https://github.com/rohitraj1104/lab
