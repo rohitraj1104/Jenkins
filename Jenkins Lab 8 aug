@@ -107,4 +107,5 @@ mvn test
 
 in the Jenkins under build we selece invoke Mavin and this cmd: -B -DskipTests clean package
 
+We first build and then package in jar,exe file and maven is build package lifecycle tool.
 
