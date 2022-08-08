@@ -109,3 +109,5 @@ in the Jenkins under build we selece invoke Mavin and this cmd: -B -DskipTests c
 
 We first build and then package in jar,exe file and maven is build package lifecycle tool.
 
+In the new proj we also have option to create new pipeline which actually helps us to build same pipeline using script like import code, run periodically e
+everything using pipeline
