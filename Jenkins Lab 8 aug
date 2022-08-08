@@ -60,7 +60,11 @@ Delete workspace before build start:  Jenkins creates folder before it creates j
 it will consume more time.   /var/lib/jenkins directory 
 
 Terminate build if it stuck:   close build after 3min if it stuck
+
 =====================================================================================================================
+
+Pipeline in Jenkins use --> Jenkinsfile. Jenkins use their own domain specfic language means their backend lang is different but Jenkins has its own GUI.
+Jenkins files translate into groovy language but we dont need to worry.
 
 
 
