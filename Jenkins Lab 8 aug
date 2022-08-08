@@ -29,7 +29,7 @@ Jenkins --> new item --> Freestyle proj --> name of job
 
 =====================================================================================================================
 
-Terms:
+::::::::::Terms::::::::::
 
 Discard old build --> when we create new proj in java it creates jar file so here we can select how many jar/var we want to save ( to save space)
 we can select days: like 4 days so it will save 4 days file
@@ -51,9 +51,15 @@ Build after other proj build: run new proj only once first proj complete
 
 Build periodically: Schedule tasks, run job timely  H/15 * * * * (run job every 15min)
 
-Poll SCM:  SCM(source code management) it check src code as per time set and if there is change then it builds otherwise it will skip.  H/15 * * * * (run job every 15min) do not consume resources like Build periodically, its better than Build periodically.
+Poll SCM:  SCM(source code management) it check src code as per time set and if there is change then it builds otherwise it will skip.  
+H/15 * * * * (run job every 15min) do not consume resources like Build periodically, its better than Build periodically.
 
+We can also use hook of git hub: hook pushes new code to build without requirement of poll SCM and Build periodically
 
+Delete workspace before build start:  Jenkins creates folder before it creates job. so u can choose to delete folder for fress installation but
+it will consume more time.   /var/lib/jenkins directory 
+
+Terminate build if it stuck:   close build after 3min if it stuck
 =====================================================================================================================
 
 
