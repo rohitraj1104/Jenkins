@@ -69,6 +69,16 @@ Jenkins files translate into groovy language but we dont need to worry.
 =====================================================================================================================
 
 
+IN the LAB we use following cmd:
 
+git config --global user.name "gopal das"
+git config --global user.email "gopal1409@gmail.com"
+git clone https://github.com/gopal1409/springboot-chat-app.git
+cd springboot-chat-app/
+rm -rf .git   (.git basically removes all versioning details)
+git init
+git add .
+git commit -m "my spring app"
+git log
 
 
