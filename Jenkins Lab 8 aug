@@ -88,4 +88,23 @@ last cmd is >>  git push -u origin master
 
 So I sucesfully pushed this repo : https://github.com/rohitraj1104/lab
 
+In the lab we used maven project and this in the lab we used Maven project >> which we can check in pom.xml
+
+Since it is a maven proj to we will install maven to complie java application ---> apt install maven and then check version maven --version
+
+Maven has build life cycle
+
+1 life cylce -- > validate 
+2.           ---> compile 
+3 life cylce -- > test
+4 life cylce  ---> package
+5 life cylce.   --> verify 
+6 life cylce.   --> Install
+then finally deploy
+
+mvn package    ( this cmd do package, verify and install) 
+mvn test
+
+in the Jenkins under build we selece invoke Mavin and this cmd: -B DskipTests clean package
+
 
