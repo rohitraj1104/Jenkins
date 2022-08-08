@@ -1,0 +1,42 @@
+Jenkins lab day 1 8th Aug
+==============================================================================================
+
+
+SOURCE MACHINE: Ubuntu   Reference: https://www.jenkins.io/doc/book/installing/linux/#debianubuntu  Jenkins Version: Jenkins 2.346.2
+ - apt-get update
+ - We need Java as pre requirement, so run cmd : apt install default-jdk
+ - Run following cmd from the URL:
+ 
+ -   curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+- sudo apt-get update
+- sudo apt-get install jenkins
+
+Open Jenkins box on IP:8080
+
+Admin Password:  open server file:     cat /var/lib/jenkins/secrets/initialAdminPassword  
+
+After login >> select install suggested plugins --> if its doen't work just restart app : systemctl restart jenkins
+==============================================================================================
+
+
+Manage jenkins --> at the left bar to install plugins , manage users
+
+Jenkins --> new item --> Freestyle proj --> name of job 
+
+==============================================================================================
+
+Terms:
+
+Discard old build --> when we create new proj in java it creates jar file so here we can select how many jar/var we want to save ( to save space)
+we can select days: like 4 days so it will save 4 days file
+Max build: 100 then 100 builds max in 4 days.
+
+The project is paramterized:   Before this project executed u want to pass some parameter : like file parameter, multi-line parameter, cred paramater
+                                API parameter, choice parameter -- helps u to skip stages in pipeline
+                                
+
+
