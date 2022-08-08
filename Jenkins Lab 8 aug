@@ -85,3 +85,5 @@ git log
 Create new repositry in git >> create ssh key in machine and add in git under setting (ssh and gpg key) >> in the new reposiroty click on ssh and
 copy git remote command and paste into machine.
 last cmd is git push -u origin master
+
+So I sucesfully pulled this repo : https://github.com/rohitraj1104/lab
