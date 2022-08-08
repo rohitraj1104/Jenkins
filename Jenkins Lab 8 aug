@@ -38,5 +38,13 @@ Max build: 100 then 100 builds max in 4 days.
 The project is paramterized:   Before this project executed u want to pass some parameter : like file parameter, multi-line parameter, cred paramater
                                 API parameter, choice parameter -- helps u to skip stages in pipeline
                                 
+Throttle build:  Enforce minimum time in between builds,  Ex: second build shud be push after some gap. like 1 hr, 1 day, 1 month
+
+Execute concurrent build: u can create concurrent builds, multipe developers ( so require caution) [ By default Jenkins use pipeline to second build execute
+only after first build.
+
+Trigger build: One job trigger other build
+
+
 
 
