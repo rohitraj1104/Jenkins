@@ -105,6 +105,6 @@ then finally deploy
 mvn package    ( this cmd do package, verify and install) 
 mvn test
 
-in the Jenkins under build we selece invoke Mavin and this cmd: -B DskipTests clean package
+in the Jenkins under build we selece invoke Mavin and this cmd: -B -DskipTests clean package
 
 
