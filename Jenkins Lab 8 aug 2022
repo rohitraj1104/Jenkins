@@ -111,3 +111,18 @@ We first build and then package in jar,exe file and maven is build package lifec
 
 In the new proj we also have option to create new pipeline which actually helps us to build same pipeline using script like import code, run periodically e
 everything using pipeline
+
+Example of pipeline:
+
+pipeline {
+    agent any
+    stages {
+        stage('code scm ') {
+            steps {
+                git credentialsId: 'git-token', url: 'git@github.com:rohitraj1104/lab.git'
+            }
+        }
+        stages('mvn build') {
+        sh 'mvm -B -DskipTests clean package'
+    }
+}
