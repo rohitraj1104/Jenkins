@@ -1,5 +1,5 @@
 Jenkins lab day 1 8th Aug
-==============================================================================================
+=====================================================================================================================
 
 
 SOURCE MACHINE: Ubuntu   Reference: https://www.jenkins.io/doc/book/installing/linux/#debianubuntu  Jenkins Version: Jenkins 2.346.2
@@ -20,14 +20,14 @@ Open Jenkins box on IP:8080
 Admin Password:  open server file:     cat /var/lib/jenkins/secrets/initialAdminPassword  
 
 After login >> select install suggested plugins --> if its doen't work just restart app : systemctl restart jenkins
-==============================================================================================
+=====================================================================================================================
 
 
 Manage jenkins --> at the left bar to install plugins , manage users
 
 Jenkins --> new item --> Freestyle proj --> name of job 
 
-==============================================================================================
+=====================================================================================================================
 
 Terms:
 
@@ -44,6 +44,18 @@ Execute concurrent build: u can create concurrent builds, multipe developers ( s
 only after first build.
 
 Trigger build: One job trigger other build
+
+Trigger builds remotely: One Jenikis trigger job remotely on other offshore jenkins machine
+
+Build after other proj build: run new proj only once first proj complete
+
+Build periodically: Schedule tasks, run job timely  H/15 * * * * (run job every 15min)
+
+Poll SCM:  SCM(source code management) it check src code as per time set and if there is change then it builds otherwise it will skip.  H/15 * * * * (run job every 15min) do not consume resources like Build periodically, its better than Build periodically.
+
+
+=====================================================================================================================
+
 
 
 
